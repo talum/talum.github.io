@@ -1,2 +1,40 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
+
+h1.entry-title {
+  color:rgb(148, 195, 201);
+
+  a, a:visited, a:active{
+  color: rgb(186, 225, 229);
+  }
+  a:hover {
+  color: rgb(191, 164, 101);
+  text-decoration:none;
+  }
+}
+
+.entry-content {
+  p {
+  color: rgba(102, 102, 102, 1); 
+  }
+}
+
+.sidebar{
+  section{
+      h1{
+        color: rgba(191, 164, 101,1);
+      }
+    }
+}
+
+.entry-date{
+  color: rgba(191, 164, 101,1);  
+}
+
+hgroup{
+  text-align:center;
+}
+
+footer, footer p{
+  text-align:center;
+}
