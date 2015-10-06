@@ -15,7 +15,7 @@ With lots of help. Specifically, [this post](http://tsiege.github.io/blog/2014/0
 `rake preview`
 
 and then navigate your browser to **localhost:4000**, you can see your changes in real time. Cool. 
-
+<!--more-->
 While I'm doing this, I'm also learning how to use [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#emphasis), so please forgive any weird formatting.
 
 I'm still having trouble changing the hover color on the h1 title links for each post though, so if anyone has any suggestions, I would appreciate it.  
