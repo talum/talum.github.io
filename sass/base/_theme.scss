@@ -4,7 +4,7 @@ $img-border: inline-image('dotted-border.png') !default;
 // Main Link Colors
 $link-color: rgb(196, 224, 229) !default;
 $link-color-hover: adjust-color($link-color, $lightness: 2, $saturation: 25) !default;
-$link-color-visited: adjust-color($link-color, $hue: 80, $lightness: -4) !default;
+$link-color-visited: rgb(196, 224, 229) /*adjust-color($link-color, $hue: 80, $lightness: -4)*/ !default;
 $link-color-active: adjust-color($link-color-hover, $lightness: -15) !default;
 
 // Main Section Colors

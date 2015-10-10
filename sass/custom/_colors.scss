@@ -8,7 +8,7 @@ $nav-bg: rgba(186, 225, 229, 1); /*desaturate((rgba(186, 225, 229, 1)), 2)*/;
 $nav-bg-front: $nav-bg /*image-url('noise.png')*/;
 $nav-bg-back: $nav-bg /*linear-gradient(lighten($nav-bg, 8), $nav-bg, darken($nav-bg, 11))*/;
 $sidebar-bg: desaturate(#eceff5, 8);
-$sidebar-link-color: saturate(#526f9a, 10);
+$sidebar-link-color: rgba(102, 102, 102, 1);
 $sidebar-link-color-hover: rgb(191, 164, 101) /*darken(#7ab662, 9)*/;
 $footer-bg: rgba(191, 164, 101,1) !default;
 $footer-bg-front: $footer-bg /*image-url('noise.png')*/;
