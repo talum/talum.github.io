@@ -2,10 +2,10 @@ $noise-bg: image-url('noise.png') top left !default;
 $img-border: inline-image('dotted-border.png') !default;
 
 // Main Link Colors
-$link-color: rgb(196, 224, 229) !default;
+$link-color: rgb(148, 195, 201) !default;
 $link-color-hover: adjust-color($link-color, $lightness: 2, $saturation: 25) !default;
-$link-color-visited: rgb(196, 224, 229) /*adjust-color($link-color, $hue: 80, $lightness: -4)*/ !default;
-$link-color-active: adjust-color($link-color-hover, $lightness: -15) !default;
+$link-color-visited: rgb(148, 195, 201) /*adjust-color($link-color, $hue: 80, $lightness: -4)*/ !default;
+$link-color-active: adjust-color($link-color-hover, $lightness: 0) !default;
 
 // Main Section Colors
 $main-bg: #f8f8f8 !default;
