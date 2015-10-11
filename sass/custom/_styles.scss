@@ -18,7 +18,7 @@ h1 {
     color:rgb(191, 164, 101);
   }
 
-  p {
+  p, li {
   color: rgba(102, 102, 102, 1); 
     a, a:visited, a:active{
       color:rgb(148, 195, 201);
@@ -29,7 +29,12 @@ h1 {
       text-decoration:none;
     }
   }
+
+  ul{
+  margin-left:2em;
+  }
 }
+
 
 .sidebar{
   section{
