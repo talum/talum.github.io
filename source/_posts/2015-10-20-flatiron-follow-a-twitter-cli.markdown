@@ -5,6 +5,7 @@ date: 2015-10-20 14:10:07 -0400
 comments: true
 categories: "Flatiron&nbsp;School"
 ---
+![alt text](/images/flatironfollower.png "Flatiron Follower")
 
 ##The Problem
 
