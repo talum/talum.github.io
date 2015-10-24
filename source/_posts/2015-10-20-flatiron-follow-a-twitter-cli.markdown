@@ -12,6 +12,8 @@ I'm having a great time at the Flatiron School, so much so that I wanted to conn
 
 And there is, in a sense. Along with my classmate, Natalie, I decided to write an application that would allow everyone in our class connect with each other, if not on Facebook, then at least on Twitter. For our Flatiron Presents Meetup, we wrote a little CLI application we've entitled [Flatiron Follower](https://github.com/NColey/Flatiron-Student-Follower). 
 
+<!--more--> 
+
 ##The Solution
 
 On our first day here, we all created student profiles for a partner and published them to a [class website](https://learn-co-students.github.io/deploy-on-day-1-web-0915/). On each profile, we included information about our partner's biography, and included links to their social media profiles on Github, LinkedIn, and, of course, Twitter. 
