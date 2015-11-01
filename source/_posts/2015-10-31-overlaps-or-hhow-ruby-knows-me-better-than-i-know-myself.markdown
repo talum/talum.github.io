@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Overlaps, or, How Ruby Knows Me Better Than I Know Myself"
+title: "Overlaps with Ranges and How Ruby Just Gets Me"
 date: 2015-10-31 18:55:00 -0400
 comments: true
-categories: 
+categories: "Flatiron&nbsp;School"
 ---
 
 Until recently, I didn't think that natural languages and computer languages had much in common. Natural languages, or languages for humans, are normally flexible and varied, having evolved organically over time. In natural languages, there are many ways to say the same thing, with different vocabulary or syntax. And unlike in constructued languages (like computer languages), there is ample room for interpretation, so even if you don't speak a perfectly grammatically correct and complete sentence, it's likely that a native speaker will understand what you're trying to say. 
@@ -35,9 +35,11 @@ As it turns out, this doesn't work because the logic isn't quite right. The meth
 For example:
 
 ```ruby
-(2..43).cover?(3..5) => false 
+(2..43).cover?(3..5) 
+=> false 
 
-(2..43).cover?(3) => true
+(2..43).cover?(3) 
+=> true
 ```
 
 ###Include Fail: Don't Do This
@@ -56,16 +58,18 @@ Again, not great, because `include?` will only return true if a single element i
 Mostly we encountered the same problem that we had with `cover?`.
 
 ```ruby 
-(2..43).include?(3..5) => false
+(2..43).include?(3..5)
+=> false
 
-(2..43).include?(3) => true
+(2..43).include?(3)
+=> true
 ```
 
-(Tangent: You can actually use `include_with_range?`, but that isn't the most intuitive thing to type or Google.)
+(Aside: You can actually use `include_with_range?`, but that isn't the most intuitive thing to type or Google.)
 
-###Overlaps: SUCCESS 
+###Overlaps: SUCCESS -- You Can Do This 
 
-After those two failed attempts, we started chatting again and wondered if there were some sort of method available that would determine if two ranges overlapped...so we Googled some variation of the phrase "range overlap in Ruby." And short story made shorter, the method is called `overlaps?`. 
+After those two failed attempts, we started chatting again and wondered if there were some sort of method available that would determine if two ranges overlapped...so we consulted the all-knowing Google and searched for some variation of the phrase "range overlap in Ruby." And short story made shorter, the method is called `overlaps?`. 
 
 
 ```ruby
@@ -78,6 +82,6 @@ end
 
 And this got us the information we wanted. `Overlaps?` returns true if two ranges overlap each other. In other words, if the desired check-in and check-out date range overlapped with any of the current reservations, this line would return true, and the listing would be unavailable. For more information on its use, [go here](http://api.rubyonrails.org/classes/Range.html#method-i-overlaps-3F).
 
-Isn't that crazy? It takes me back to when I was learning Spanish in high school, when I would guess at words instead of looking them up in a dictionary because there are so many English cognates. Surprisingly, I was right a lot of the time. I can only hope I get to that point with Ruby soon.  
+Isn't that crazy? It's like Ruby read my mind...which takes me back to when I was learning Spanish in high school, when I would guess at words instead of looking them up in a dictionary because there are so many English cognates. Surprisingly, I was right a lot of the time. I can only hope I get to that point with Ruby soon.  
 
 So, that's that. I think that when it comes to learning Ruby, the more you learn, the easier it will become to learn more. So for any other beginners out there, stay strong and keep going. At best, you'll be great. At worst, you can always Google. 
