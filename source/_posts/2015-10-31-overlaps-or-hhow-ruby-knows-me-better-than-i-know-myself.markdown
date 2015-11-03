@@ -50,8 +50,9 @@ Up next, we tried `include?`.
 def available?
   ...
   (checkin_requested..checkout_requested).include?(checkin..checkout)
-end
   ...
+end
+
 ```
 Again, not great, because `include?` will only return true if a single element in the argument is captured in the range the method is being called on. 
 
@@ -85,7 +86,7 @@ Example in Rails Console:
 #=> true
 ```
 
-Code Snippet from Our Solution
+Code Snippet from Our Solution:
 
 ```ruby
 def available?
