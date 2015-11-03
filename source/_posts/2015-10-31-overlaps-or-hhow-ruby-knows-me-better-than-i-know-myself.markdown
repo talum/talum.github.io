@@ -12,9 +12,9 @@ But as I continue learning Ruby, and, more specifically, Ruby on Rails, I'm real
 
 <!--more -->
 
-What's also great about Ruby is that it's very expressive and elegant, and it seems to intuit what you're trying to say (or do). Rails, meanwhile, continues to freak me out with just how much it anticipates what I want to do, especially with forms. See: `form_for`. You can throw one form in a partial and render it on the **new** and **edit** views? Mind boggling. 
+What's also great about Ruby is that it's very expressive and elegant, and it seems to intuit what you're trying to say (or do). Rails especially continues to freak me out with just how much it anticipates what I want to do, especially with forms. See: `form_for`. You can throw one form in a partial and render it on the **new** and **edit** views? Mind boggling. 
 
-Here's an example of just how awesome and human-language-like Ruby is. The other day, a classmate (Reuben) and I were working on a super long and difficult lab that mimicked the creation of models similar to that of well-known and popular peer-to-peer room-sharing service. We needed to figure out a way to determine if a listing for a room or property was available over a certain period of time, and we had a few data points at our disposal.
+But anyway, here's an example of just how awesome and human-language-like Ruby is. The other day, a classmate (Reuben) and I were working on a super long and difficult lab that mimicked the creation of models similar to that of well-known and popular peer-to-peer room-sharing service. We needed to figure out a way to determine if a listing for a room or property was available over a certain period of time, and we had a few data points at our disposal.
 
 We had all the existing reservations for a listing, with check-in and check-out dates, as well as the desired check-in and check-out date for a new potential reservation. 
 
@@ -36,10 +36,10 @@ For example:
 
 ```ruby
 (2..43).cover?(3..5) 
-=> false 
+#=> false 
 
 (2..43).cover?(3) 
-=> true
+#=> true
 ```
 
 ###Include Fail: Don't Do This
@@ -59,18 +59,33 @@ Mostly we encountered the same problem that we had with `cover?`.
 
 ```ruby 
 (2..43).include?(3..5)
-=> false
+#=> false
 
 (2..43).include?(3)
-=> true
+#=> true
 ```
 
 (Aside: You can actually use `include_with_range?`, but that isn't the most intuitive thing to type or Google.)
 
-###Overlaps: SUCCESS -- You Can Do This 
+###Overlaps: SUCCESS -- You Can Do This (In Rails)
 
 After those two failed attempts, we started chatting again and wondered if there were some sort of method available that would determine if two ranges overlapped...so we consulted the all-knowing Google and searched for some variation of the phrase "range overlap in Ruby." And short story made shorter, the method is called `overlaps?`. 
 
+Caveat: You can only use it within a Rails environment. If you try to do something similar in irb, you'll get an error.
+
+Example in IRB:
+```ruby
+(2..43).overlaps?(3..5)
+#=> NoMethodError: undefined method 'overlaps?' for 2..43:Range
+```  
+
+Example in Rails Console:
+```ruby
+(2..43).overlaps?(3..5)
+#=> true
+```
+
+Code Snippet from Our Solution
 
 ```ruby
 def available?
@@ -82,6 +97,6 @@ end
 
 And this got us the information we wanted. `Overlaps?` returns true if two ranges overlap each other. In other words, if the desired check-in and check-out date range overlapped with any of the current reservations, this line would return true, and the listing would be unavailable. For more information on its use, [go here](http://api.rubyonrails.org/classes/Range.html#method-i-overlaps-3F).
 
-Isn't that crazy? It's like Ruby read my mind...which takes me back to when I was learning Spanish in high school, when I would guess at words instead of looking them up in a dictionary because there are so many English cognates. Surprisingly, I was right a lot of the time. I can only hope I get to that point with Ruby soon.  
+Isn't that crazy? It's like Ruby on Rails read my mind...which takes me back to when I was learning Spanish in high school, when I would guess at words instead of looking them up in a dictionary because there are so many English cognates. Surprisingly, I was right a lot of the time. I can only hope I get to that point with Ruby soon.  
 
 So, that's that. I think that when it comes to learning Ruby, the more you learn, the easier it will become to learn more. So for any other beginners out there, stay strong and keep going. At best, you'll be great. At worst, you can always Google. 
