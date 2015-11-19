@@ -52,6 +52,9 @@ end
 ```
 And now when I tried logging in through GitHub again, I was prompted to allow the application to access this additional scope. After I did that, I received a different token in the auth_hash, which I saved and was able to use with the GitHub API. 
 
+![alt text](/images/github-modify-auth.png "Modify GitHub Permissions")
+A screenshot of fiddling with GitHub scopes.
+
 ##GitHub API
 To use the GitHub API to modify a user's profile or repositories, you'll need to send along the access token with your request. Again, GitHub outlines this in their [API guides](https://developer.github.com/v3/oauth/#scopes), but for clarity, here is some more information. 
 
