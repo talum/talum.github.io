@@ -45,7 +45,7 @@ Fortunately, as I learned, there's a pretty easy fix. Turbolinks provides a numb
 
 Much Googling and consulting of guides have led me to believe that hooking into `page:change` is generally preferred. 
 
-For clarity, here's an explicit exmaple from my code. 
+For clarity, here's an explicit example from my code. 
 
 ```javascript
 $(document).on('page:change', function(){
