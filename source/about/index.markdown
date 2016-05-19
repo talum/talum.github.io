@@ -7,14 +7,14 @@ sharing: true
 footer: true
 ---
 
-Hello, I'm Tracy Lum. 
+Hello! I'm Tracy Lum.
 
-I am part of the [Flatiron School](http://www.flatironschool.com)'s Web 0915 cohort. Go #tronauts. 
+I graduated from the [Flatiron School](http://www.flatironschool.com) in December 2015. Currently, I work at [Learn.co](http://www.learn.co), which is made with love by the Flatiron School. Prior to officially learning how to code, I worked in publishing/podcasts/media/newspapers.
 
-Suffice it to say that I care deeply about building a more beautiful web. 
+When I'm not programming, I'm probably writing, reading, learning languages, running, drinking coffee, or trying to learn more things. I'm a huge dork like that. 
 
-Elsewhere:
+You can find me online, pretty much anywhere online media is posted:
 
-[Personal Blog](http://www.tracylum.com)
-[Github](http://github.com/talum)
-[Twitter](http://www.twitter.com/tracidini)
+- [Personal Blog](http://www.tracylum.com)
+- [Github](http://github.com/talum)
+- [Twitter](http://www.twitter.com/tracidini)
