@@ -32,9 +32,9 @@ will probably do.
 Now, it's time iterate over your users and write to that CSV.
 
 ```ruby
-users.each do |user|
-  CSV.open(file, 'w') do |csv|
-    csv << [user.id, user.name, user.github_username]
+CSV.open(file, 'w') do |csv|
+  users.each do |user|
+     csv << [user.id, user.name, user.github_username]
   end
 end
 ```
