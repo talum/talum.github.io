@@ -82,7 +82,7 @@ extensions.
 
 My base module was defined as this: 
 
-```css
+```scss
 .module {
   padding: $default-spacing;
   .module__head {
@@ -92,7 +92,7 @@ My base module was defined as this:
 ```
 
 And as an example, my `.module--card` looked like this:
-```css
+```scss
 .module--card {
   .module__body {
      @include purple-gradient;
