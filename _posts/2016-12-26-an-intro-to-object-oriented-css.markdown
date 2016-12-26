@@ -92,6 +92,7 @@ My base module was defined as this:
 ```
 
 And as an example, my `.module--card` looked like this:
+
 ```scss
 .module--card {
   .module__body {
@@ -120,6 +121,7 @@ I could probably clean up my modules a bit more, but the idea is that there
 is a base module, which I then extend with additional styles. 
 
 The markup on the page would look something like this:
+
 ```html
 <div class="module module--card">
   <div class="module__body">
