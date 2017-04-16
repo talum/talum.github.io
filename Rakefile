@@ -12,7 +12,7 @@ task :new_post, [:title] do |t, args|
   else
     title = args[:title]
   end
-  formatted_title = title.downcase.split(" ").join("-")
+  formatted_title = title.downcase.gsub(' ', '-').gsub(/[^\w-]/, '')
 
   post_title = "#{date.strftime('%Y-%m-%d')}-#{formatted_title}.markdown"
   contents = <<-STR 
