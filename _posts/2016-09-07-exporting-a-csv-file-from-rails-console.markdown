@@ -25,7 +25,7 @@ Determine the location of where you want your file to be stored. If you're
 doing this on a remote server, you probably want to put the file in a
 temporary loation. Something like
 
-`file = "#{Rails.root}/#{Date.current}/user_list.csv"` 
+`file = "#{Rails.root}/tmp/#{Date.current}-user_list.csv"` 
 
 will probably do. 
 
