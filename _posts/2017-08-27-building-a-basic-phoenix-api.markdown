@@ -7,33 +7,35 @@ categories: ["elixir", "phoenix"]
 ---
 
 Recently, I started learning Phoenix, a Rails-like framework written in
-Elixir, that has sometimes been called "Rails, the Good Parts". As I've learned over the past couple years, it's easier for me to
+Elixir that has sometimes been called "Rails, the Good Parts". It's often easier for me to
 learn something when I actually have to apply it, so I decided to write a
 little app to do some practice for when I'm not actively staffed on a
 Phoenix project at work.
 
 ## The Project
-When I make projects, I usually choose something either ridiculous or
-something I care about. The best projects I make combine both. This time
-around, I built an app that pulls the commit messages from an old co-worker
+When I make projects, I like to choose something either ridiculous or that
+I care about. The best projects I make combine both. This time
+around, I built an app that pulls the commit messages authored by an old co-worker
 of mine, from across our codebase. For context, he writes (or possibly just wrote) the
 most hilarious commit messages, and it just makes me laugh to see a couple
-of them every day. Well, usually, I stumbled upon them while working on
+of them every day. I often stumbled upon them while working on
 something at work, but I figured, why not surface them at will?
 
-So, the thing I built has a seed file that hits the GitHub API to generate
-data. Then I created an API to surface those messages. The API just returns
-some JSON. What's nice about this is that a flexible API gives me the
-ability the surface the data in a number of ways, a web app, a Slackbot, and
+So, the app I built has a seed file that contains a script that hits the GitHub API to generate
+data. There's also an API to surface those messages. The API just returns
+some JSON. What's nice about this approach is that a flexible API gives me the
+ability the surface the data in a number of ways, including a web app, a Slackbot, and
 a Chrome Extension. (I'm playing around with this idea of creating bundles
 of software as a product.) But I digress. Today, we're talking about
 building an API in Phoenix.
 
 ## Generators
 Like Rails, Phoenix also comes with some nifty generators. Because my app is
-so basic, I just needed to generate one controller, a view, a template, and what are now known in
+so basic, I just needed to generate one controller, a view, and what are now known in
 Phoenix as "schemas." By running this command, I was able to create a
-scaffold in a few seconds: `mix phx.gen.json CommitMessage commit_messages
+scaffold in a few seconds:
+
+`mix phx.gen.json CommitMessage commit_messages
 committed_at:datetime content:string repo_name:string`.
 
 Then, as instructed, I added the line:
@@ -122,14 +124,6 @@ defmodule Commits.Logs do
 
   alias Commits.Logs.CommitMessage
 
-  def get_random_message do
-    count = Repo.all(CommitMessage)
-            |> Enum.count
-    random_id = :rand.uniform(count)
-
-    Repo.get!(CommitMessage, random_id)
-  end
-
   def list_commit_messages do
     Repo.all(CommitMessage)
   end
@@ -139,8 +133,7 @@ defmodule Commits.Logs do
 ```
 
 Above, you'll see the module code after some pruning. I removed the
-documentation notes and also implemented my own method for getting a random
-message, which will come in handy later. Here, we're using the `Repo` module
+documentation notes. Here, we're using the `Repo` module
 to fetch data. Again, most of this was generated, so I'm just interpreting
 it for my own knowledge (and for yours?).
 
