@@ -6,6 +6,8 @@ comments: true
 categories: ["elixir", "phoenix"]
 ---
 
+![Commits](https://s3-us-west-2.amazonaws.com/talum.github.io/commits.gif)
+
 Recently, I started learning Phoenix, a Rails-like framework written in
 Elixir that has sometimes been called "Rails, the Good Parts". It's often easier for me to
 learn something when I actually have to apply it, so I decided to write a
@@ -186,9 +188,13 @@ For other web apps with rich views, you'd probably define templates. In this
 case, because we're making an API, we just need to return some JSON, as
 formatted above.
 
-And with that, we have a basic API in Phoenix.
+And with that, we have a basic API in Phoenix. You can see the final product
+for the web app [here](https://commits-by-logan.herokuapp.com/). More to come on the React
+front-end, the Slackbot, and the Chrome Extension.
 
 
 ## Resources
 - [Programming
   Phoenix](https://pragprog.com/book/phoenix/programming-phoenix)
+- [Phoenix Docs](https://hexdocs.pm/phoenix/overview.html)
+- [Elixir Lang](https://elixir-lang.org/)
