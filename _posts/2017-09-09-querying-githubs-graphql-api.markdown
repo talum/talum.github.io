@@ -13,22 +13,24 @@ some really ugly code and a pseudo explanation of it all.
 
 # GraphQL
 
-GraphQL stands for graph query language. GitHub has a pretty nice [intro to
+GraphQL stands for graph query language. Graph refers more to the structure
+of the data, which consists of nodes and edges, than to a graph that you
+might see in a presentation. GitHub has a pretty nice [intro to
 GraphQL](https://developer.github.com/v4/guides/intro-to-graphql/) if you're
-interested. In summary, when you have a GraphQL API instead of a REST API,
+interested, but in summary, when you query a GraphQL API instead of a REST API,
 you can fetch data from related resources in a single query from one
 endpoint, [https://api.github.com/graphql](https://api.github.com/graphql),
-in the case of GitHub. With a REST API, you'd likely have multiple endpoints
+in the case of GitHub, instead of many. With a REST API, you'd likely have multiple endpoints
 you'd need to hit in order to gather all the data you need. 
 
-One thing to note that this is usually the case with a well-maintained,
-public API. If you're working with an API you design that isn't totally
-RESTful, you probably haven't run needed to make multiple queries in order
+One thing to note is that this is usually the case with a well-maintained,
+public API. If you're working with an API you design yourself that isn't totally
+RESTful, you probably haven't needed to make multiple queries in order
 to obtain the data you need. In Rails-land, for instance, we often define
 serializers that specify how we want an object to be represented after we
 query or change it in an endpoint.
 
-In order to form a query, you send a single post request to the endpoint.
+In order to form a query, you send a single POST request to the endpoint.
 Within the body of the request you place your query as a string. 
 
 I played a lot with the [GitHub GraphQL Explorer](https://developer.github.com/v4/explorer/) in order to get a sense of what my query would actually look like. One nice thing you'll notice about GraphQL is that the structure of your query will basically mirror the structure of the JSON payload you get back. Among the other many benefits of GraphQL is the ability to ask for exactly the data you need, nothing more, nothing less.
@@ -39,14 +41,18 @@ In order to get started with the GitHub API, you'll need to do a couple
 setup steps, such as [creating a personal access token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/) in order to authenticate. You'll also need to grant that access token certain scopes.
 
 When you're ready, it's time to query, and by query, I mean mess around with
-the explorer until you get something that resemble the data you want.
+the explorer until you get something that resembles the data you want.
 
 I decided to start from a repository. After consulting some of the
 [schema](https://developer.github.com/v4/reference/object/repository/)
 documentations and more experimentation, I was able to form a query that
-would go from the repository (a node), grab a ref with the name of `master`,
+would go from the repository (a node), grab a ref (or branch) with the name of `master`,
 then leverage a `target`, in this case a Git object, and eventually use an
-inline fragment to extract some data about commits. From there, I started
+inline fragment to extract some data about commits. Refs and branches aren't
+quite one and the same, but it was close enough for my purposes.
+
+
+From there, I started
 traversing the graph using edges and nodes, where edges are the connections
 between nodes and nodes are basically different resources, to grab all of
 the commits by this one individual. Full disclosure: I have not read all of
@@ -54,10 +60,11 @@ the docs about queries and GraphQL, but I did land on this query, which does
 the job fairly well.
 
 For reference, here's the function I created that will construct the query I
-want while passing in some variables.
+want while passing in some variables. The cursor I ended up using was the
+SHA of the most recent commit at the time I was writing this.
 
 ```elixir
-  def query(repoName, owner, cursor) do
+  def query(repoName, owner, cursor, authorId) do
     "query {
       repository(name: \"#{repoName}\", owner:\"#{owner}\") {
         name
@@ -65,7 +72,7 @@ want while passing in some variables.
           target {
             ... on Commit {
               id
-              history(first: 100, author: {id: \"MDQ6VXNlcjEyNDA1MDQ=\"}, after: \"#{cursor}\") {
+              history(first: 100, author: {id: \"#{authorId}\"}, after: \"#{cursor}\") {
                 pageInfo {
                   hasNextPage
                 }
@@ -99,7 +106,7 @@ The content of the module follows below:
 ```elixir
 defmodule Seed do
 
-  def query(repoName, owner, cursor) do
+  def query(repoName, owner, cursor, authorId) do
     "query {
       repository(name: \"#{repoName}\", owner:\"#{owner}\") {
         name
@@ -107,7 +114,7 @@ defmodule Seed do
           target {
             ... on Commit {
               id
-              history(first: 100, author: {id: \"MDQ6VXNlcjEyNDA1MDQ=\"}, after: \"#{cursor}\") {
+              history(first: 100, author: {id: \"#{authorId}\"}, after: \"#{cursor}\") {
                 pageInfo {
                   hasNextPage
                 }
@@ -130,10 +137,10 @@ defmodule Seed do
     }"
   end
 
-  def get_commits(repoName, owner, cursor, hasNextPage) when hasNextPage == true do
+  def get_commits(repoName, owner, cursor, hasNextPage, authorId) when hasNextPage == true do
     token = Application.get_env(:commits, :github_access_token)
 
-    {:ok, %HTTPoison.Response{status_code: 200, body: body}} = HTTPoison.post("https://api.github.com/graphql", Poison.encode!(%{"query" => query(repoName, owner, cursor)}), [{"Authorization", "bearer #{token}"}, {"Content-Type", "application/json"}])
+    {:ok, %HTTPoison.Response{status_code: 200, body: body}} = HTTPoison.post("https://api.github.com/graphql", Poison.encode!(%{"query" => query(repoName, owner, cursor, authorId)}), [{"Authorization", "bearer #{token}"}, {"Content-Type", "application/json"}])
 
     history = body
       |> Poison.decode!
@@ -148,10 +155,10 @@ defmodule Seed do
     Enum.map(commits, fn c -> save(c, repoName) end)
 
     last_cursor = List.last(commits)["cursor"]
-    get_commits(repoName, owner, last_cursor, nextPage)
+    get_commits(repoName, owner, last_cursor, nextPage, authorId)
   end
 
-  def get_commits(repoName, owner, cursor, hasNextPage) when hasNextPage == false do
+  def get_commits(repoName, owner, cursor, hasNextPage, authorId) when hasNextPage == false do
     IO.puts cursor
   end
 
@@ -169,12 +176,26 @@ end
 
 ```
 
-
 # Looping in Elixir?
 
+In Ruby, you'd probaby write a loop to iterate over the paginated results
+you get from an API, whereas in Elixir you'd more likely use recursion,
+which in simple terms is when a function keeps calling itself until it gets
+to a base case and stops.
+
+Above, you'll see that instead of writing a loop, I wrote two functions
+named `get_commits`, one that is called when there is a next page and one
+that is called when there isn't. When there are still pages of results left,
+I keep calling that version of the function, and when the results run out, I
+exit the loop.
+
+At the end of my seed file, I called the function `Seed.get_commits`,
+passing in the repo, owner, authorId, cursor, and hasNextPage value of true
+for a bunch of different repos to which I have access.
 
 
 # Running the Seed File
+
 Running the seed file is easy from the command line with:
 
 ```elixir
