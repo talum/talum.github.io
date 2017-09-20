@@ -6,6 +6,8 @@ comments: true
 categories: ["mobile"]
 ---
 
+![Mobile Orientation](https://s3-us-west-2.amazonaws.com/talum.github.io/orientation.gif)
+
 # Mobile First?
 
 I've been hearing people say that we need to design for mobile first for
