@@ -98,11 +98,11 @@ Sublime, and Atom.
 As I mentioned in previous posts, I'm going all in on Vim this year, so I
 started there. I had trouble installing Syntastic, which the ESLint folks
 recommend using. Instead, I set up Ale, which is a plugin for Vim that was
-actually easy to set up. 
+actually easy to set up.
 
 First, I installed Ale using Pathogen. I'm assuming if you're using Vim,
 you're familar enough with your chosen package manager to install this
-plugin using that. 
+plugin using that.
 
 Then, I wanted to expicitly specify which linters should be run for certain
 file types, I added these lines to my `.vimrc`.
@@ -143,8 +143,11 @@ ESLint](https://s3-us-west-2.amazonaws.com/talum.github.io/sublimelint.png)
 
 For integration with Sublime, I checked out
 [SublimeLinter-eslint](https://github.com/roadhump/SublimeLinter-eslint).
-This was also pretty easy to set up. I used Package Control to install the
-package, and then...started using it. Fortunately, it appears that `eslint`
+This was also pretty easy to set up. First, you'll need to ensure that you
+have [SublimeLinter](http://www.sublimelinter.com/en/latest/) installed.
+This is the linting framework that uses a number of plugins that do the
+actual linting. Then, I used Package Control to install the linting package,
+SublimeLinter-eslint, and then...started using it. Fortunately, it appears that `eslint`
 is in my system PATH, so I didn't have to check out how the linter
 executables work and all that jazz.
 
@@ -176,6 +179,10 @@ was really nice were the settings. You could be really explicit about which
 eslint to use, local or global. You could also specify whether to try to fix
 on save or not. So in this case, I'm going to say that Atom probably wins in
 terms of ease of use and setup.
+
+The second time I did this, I had to install some linting package
+dependencies. If you're missing them, Atom will warn you that you need to
+install them.
 
 So that's all I've got on linting so far. May your code be clean and
 bug-free.
