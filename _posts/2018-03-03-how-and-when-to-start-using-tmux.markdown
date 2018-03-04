@@ -59,7 +59,7 @@ Great, now that you've got tmux installed, it's time to learn some basic
 commands.
 
 Once you're in a tmux session, anything you do to talk to tmux will require
-that you use a prefix key. The default prefux key is `ctrl+b`.
+that you use a prefix key. The default prefix key is `ctrl+b`.
 
 To start a session with a name, which you most likely want to do, run the
 following command:
