@@ -54,6 +54,8 @@ This past year, we decided to build an in-browser IDE. I know, ambitious and als
 
 First, we intended to build the UI of the browser IDE in React. Back in 2016, the team decided to write all new apps in React instead of Backbone/Marionette, and this new app certainly met that rule.
 
+![IDE](https://s3-us-west-2.amazonaws.com/talum.github.io/learnIde6.gif)
+
 The problem is that our entire lesson page is written in Backbone/Marionette and the mocks showed the browser IDE sitting right on top of that lesson. So we had to figure out some way for the two libraries to talk to each other, or do a rewrite.
 
 So this seems like a matter of figuring out just enough of each library to make them work well with each other. Thus began a deeper dive.
@@ -121,6 +123,8 @@ Whenever we have the opportunity, we try to find ways to port over Backbone/Mari
 
 **TRACK NAV**
 
+![Track Nav](https://s3-us-west-2.amazonaws.com/talum.github.io/tracknav.png)
+
 The first successful case I want to talk about is our Track Nav. The strategy that the Track Nav migration used was to maintain Backbone models and replace the Backbone view with a React one. This way, anything that was listening to the track model’s lifecycle events remains intact, and our views are rendered by React. This means that the seam was just in the view.
 
 ```javascript
@@ -144,7 +148,11 @@ This works. It’s great, but it isn’t quite the full replacement that we want
 
 A few months ago, the business wanted to integrate Jupyter Notebooks into our platform. In addition to all the backend work to spin that up, which, again, warrants its own talk, we had to make a blue button unclickable while some actions ran on a remote server. The way we spin up Jupyter Notebooks for students leverages the same backend as the IDE, so again, communications happen over Phoenix sockets, and messages are being piped into our reducers as actions.
 
+![Jupyter Notebooks](https://s3-us-west-2.amazonaws.com/talum.github.io/jupyter_lab.gif)
+
 Once again, the lesson page is nearly all in a tightly coupled Backbone/Marionette app. My first impulse when I saw this requirement was to cheat. Couldn’t we use a timeout to re-enable to button click? Wasn’t there an easier way? There wasn’t. If something in this chain of events went awry somewhere, it would just be too weird of a user experience to recover from.
+
+![Partial Derivatives Lab Highlighted](https://s3-us-west-2.amazonaws.com/talum.github.io/partial_derivatives_lab_highlighted.png)
 
 And so, my next question was can we rewrite this part of the app in React / Redux? This super cool button lives inside an app called the `ToolbarApp`. It’s super tiny. It only manages a small part of the front-end. It should have been easy enough to wrangle. Our lead dev and I dove into the code and started hunting for the seam. We wanted to provide a path forward for all new apps to be rewritten, and to do this, we were looking for a nice pinch point where we could neatly form a barrier between React and Backbone.
 
@@ -369,7 +377,24 @@ collectionItemHelper.js:104 Uncaught TypeError: Cannot read property 'findIndex'
 
 For a while, we dismissed it, thinking this can’t possibly be right. Maybe it’s just you? But another dev on our team was rightly persistent.
 
-We spent hours debugging, stepping through the controllers, actions, APIs, and finally we figured out that there was just one line of code in the Backbone app that was removing the assessments that we assumed would always be in the Redux store because we were seeding our Redux store with Backbone models. We gitblamed it, and the person responsible for that line also happened to be the person I was pairing with at the time, and neither of us could figure out why it was there in the first place. So we went ahead and removed it. Turns out although we were loading the Backbone app on the page, the Redux reducer was still loaded and still trying to update state, even though we weren’t actually trying to read from it.
+We spent hours debugging, stepping through the controllers, actions, APIs, and finally we figured out that there was just one line of code in the Backbone app that was removing the assessments that we assumed would always be in the Redux store because we were seeding our Redux store with Backbone models.
+
+```javascript
+// app/javascript/deprecated/learn_v2/models/curriculum.js
+
+// Lesson model
+  assessments: function assessments () {
+    return this._assessments || (this._assessments = initializeSubCollection.call(this, Assessments, 'assessments'));
+  },
+
+function initializeSubCollection (constructor, collectionKey) {
+  …
+  this.unset(collectionKey) // this is the culprit!
+  return collection;
+}
+```
+
+We gitblamed it, and the person responsible for that line also happened to be the person I was pairing with at the time, and neither of us could figure out why it was there in the first place. So we went ahead and removed it. Turns out although we were loading the Backbone app on the page, the Redux reducer was still loaded and still trying to update state, even though we weren’t actually trying to read from it.
 
 So, lesson learned. When you rewrite or refactor an app, be sure to come up with a strategy to test. And if you do end up rewriting something, make sure you do it completely. Vestiges of old apps or unimplemented features cause more confusion in the future than they do in the present. As always, the context is key. In the future, I’m sure we’ll get the chance to remove the legacy stuff completely, but for now, they do still exist in the dual state.
 
