@@ -6,6 +6,8 @@ comments: true
 categories: ['javascript']
 ---
 
+![EmpireJS](https://s3-us-west-2.amazonaws.com/talum.github.io/empirejs.jpg)
+
 Last week, I had the privilege of speaking at this year's
 [EmpireJS](https://2018.empirejs.org/) conference! The following is the text
 of my talk, or really, everything I intended to say. This was my first conference talk ever, so that was both exciting and terrifying. I'm glad I did it, but even happier to be done with it.
@@ -34,6 +36,8 @@ When Learn started out in 2014, no one was quite sure how it would turn out. At 
 Since then, our codebase’s front-end has gone through many frameworks and libraries, many of which responded to whatever’s trendy in the JavaScript community. We are products of our times, and the same is true of our code.
 
 In the beginning, there was jQuery. And then there was Ember. Backbone and Marionette entered the scene in May 2015. Then Ember left. And then we added React with an Alt.js store. And when Alt.js no longer served our needs, we added Redux. Excluding Ember, all of those libraries still exist in our codebase, and making them work together is often difficult and frustrating.
+
+![JavaScript Timeline](https://s3-us-west-2.amazonaws.com/talum.github.io/learn_js_timeline.png)
 
 When I’m working with all these libraries, the temptation to burn it all to the ground and start from scratch is pretty strong. I take one look at the abundance of files, some of them seemingly nonsensical, and want to flip a table. I like pristine, new and shiny code, not this crufty stuff.
 
@@ -115,7 +119,8 @@ With this bridge in place, we could do things like close the browser or dismiss 
 
 Whenever we have the opportunity, we try to find ways to port over Backbone/Marionette apps to React. But the trickiest part of doing this is finding the seam.
 
-*TRACK NAV*
+**TRACK NAV**
+
 The first successful case I want to talk about is our Track Nav. The strategy that the Track Nav migration used was to maintain Backbone models and replace the Backbone view with a React one. This way, anything that was listening to the track model’s lifecycle events remains intact, and our views are rendered by React. This means that the seam was just in the view.
 
 ```javascript
@@ -135,7 +140,8 @@ var TrackNavView = Backbone.View.extend({
 
 This works. It’s great, but it isn’t quite the full replacement that we wanted. There’s a nice seam between Backbone and React, but it isn’t the pattern that will enable us to eradicate Backbone from the system.
 
-*JUPYTER NOTEBOOKS*
+**JUPYTER NOTEBOOKS**
+
 A few months ago, the business wanted to integrate Jupyter Notebooks into our platform. In addition to all the backend work to spin that up, which, again, warrants its own talk, we had to make a blue button unclickable while some actions ran on a remote server. The way we spin up Jupyter Notebooks for students leverages the same backend as the IDE, so again, communications happen over Phoenix sockets, and messages are being piped into our reducers as actions.
 
 Once again, the lesson page is nearly all in a tightly coupled Backbone/Marionette app. My first impulse when I saw this requirement was to cheat. Couldn’t we use a timeout to re-enable to button click? Wasn’t there an easier way? There wasn’t. If something in this chain of events went awry somewhere, it would just be too weird of a user experience to recover from.
