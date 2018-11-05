@@ -110,7 +110,7 @@ Then I scoured the other internet literature, looking for other strategies to so
 rspec --seed 1234 --bisect
 ```
 
-This wasn't the final solution, however. The first few times I ran this on a single test filre, the failing tests would not make themselves known. I knew in my mind that if I could just get one to fail consistently, I'd solve the rest. But finally, I was able to reproduce the failing spec with the command above. And with that minimal reproduction command, I was able to get deterministic test runs and further isolate the problem.
+This wasn't the final solution, however. The first few times I ran this on a single test file, the failing tests would not make themselves known. I knew in my mind that if I could just get one to fail consistently, I'd solve the rest. But finally, I was able to reproduce the failing spec with the command above. And with that minimal reproduction command, I was able to get deterministic test runs and further isolate the problem.
 
 ## The Fix 🛠️
 With reproducibility, I could look closer at the code and identify the issue. Because it wasn't the same test failing all the time, I realized that the problem wasn't with the tests themselves, _but with the data setup_. `Usernames` for our `LearnAccount`s and `GithubAccount`s must be unique, but our factories weren't always generating unique values, which resulted in the `LearnAccount` and `GithubAccount` associated with a `User` failing to be persisted in the database because they weren't valid. That explained why the `learn_account` and `github_account` was sometimes `nil`.
@@ -142,7 +142,7 @@ I ran the test suite locally and on Circle a few dozen times more, all with pass
 
 ## Resources
 - [Eliminating Flaky Ruby Tests](https://engineering.gusto.com/eliminating-flaky-ruby-tests/)
-- [A Better Way to Tame Your Randomlly Failing Specs](https://sourcediving.com/a-better-way-to-tame-your-randomly-failing-specs-29040dc0ed24)
+- [A Better Way to Tame Your Randomly Failing Specs](https://sourcediving.com/a-better-way-to-tame-your-randomly-failing-specs-29040dc0ed24)
 - [RSpec Bisect](https://relishapp.com/rspec/rspec-core/docs/command-line/bisect)
 - [How RSpec helped me with resolving random spec failures](https://blog.arkency.com/2016/02/how-rspec-helped-me-with-resolving-random-spec-failures/)
 
