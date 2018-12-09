@@ -63,6 +63,8 @@ The concept that `Content` was trying to represent was an intermediary between a
 
 Each piece of "canonical" lesson content is linked to a repository on GitHub. When lessons are published or "deployed" to students, we make a copy of that GitHub repository and give students a link to it. The link between a lesson and the deployed version is called an `AssignedRepo`. 
 
+![New Curriculum Model](https://s3-us-west-2.amazonaws.com/talum.github.io/content-diagram.png)
+
 So there are GitHub repositories on both ends of lessons: the canonical version and the deployed version.
 
 ```ruby
