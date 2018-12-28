@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Setting Up ESLint Globally"
+redirect_to:
+  - https://www.tracylum.com/blog/2017-12-28-setting-up-eslint-globally/
 date: 2017-12-28 08:59:50 -0500 
 comments: true
 categories: ["javascript", "eslint"]

@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Slimming Down: Tips and Pitfalls"
+redirect_to:
+  - https://www.tracylum.com/blog/2016-05-16-slimming-down-tips-and-pitfalls/
 date: 2016-05-16 20:14:36 -0400
 comments: true
 categories: ["Flatiron&nbsp;School", "Slim"]

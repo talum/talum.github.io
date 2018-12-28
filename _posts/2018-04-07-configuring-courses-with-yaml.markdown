@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Configuring Courses with YAML"
+redirect_to:
+  - https://www.tracylum.com/blog/2018-04-07-configuring-courses-with-yaml/
 date: 2018-04-07 12:11:24 -0400
 comments: true
 categories: "configuration"

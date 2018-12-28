@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Building a Basic Phoenix API"
+redirect_to:
+  - https://www.tracylum.com/blog/2017-08-27-building-a-basic-phoenix-api/
 date: 2017-08-27 23:09:15 -0400 
 comments: true
 categories: ["elixir", "phoenix"]

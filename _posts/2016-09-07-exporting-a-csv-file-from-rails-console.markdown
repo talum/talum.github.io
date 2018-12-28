@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Exporting a CSV File from Rails Console"
+redirect_to:
+  - https://www.tracylum.com/blog/2016-09-07-exporting-a-csv-file-from-rails-console/
 date: 2016-09-07 20:14:44 -0400
 comments: true
 categories: 

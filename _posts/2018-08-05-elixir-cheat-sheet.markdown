@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Which Data Structure Should I Use? An Elixir Cheat Sheet"
+redirect_to:
+  - https://www.tracylum.com/blog/2018-08-05-elixir-cheat-sheet/
 date: 2018-08-05 10:14:24 -0400
 comments: true
 categories: ['elixir']

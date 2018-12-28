@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Setting Up Your Rails App Test Suite with RSpec, Factory Girl, and Faker"
+redirect_to:
+  - https://www.tracylum.com/blog/2017-02-12-setting-up-your-rails-app-test-suite-with-rspec-factory-girl-and-faker/
 date: 2017-02-12 13:19:02 -0500 
 comments: true
 categories: ["testing", "Rails"]

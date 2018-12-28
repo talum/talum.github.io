@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Java Basics for Rubyists and JavaScripters"
+redirect_to:
+  - https://www.tracylum.com/blog/2017-05-24-java-basics-for-rubyists-and-javascripters/
 date: 2017-05-24 23:04:05 -0400 
 comments: true
 categories: ['java', 'ruby', 'javascript']

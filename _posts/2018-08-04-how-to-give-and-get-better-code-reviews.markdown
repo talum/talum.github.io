@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "How to Give and Get Better Code Reviews"
+redirect_to:
+  - https://www.tracylum.com/blog/2018-08-04-how-to-give-and-get-better-code-reviews/
 date: 2018-08-04 12:20:01 -0400
 comments: true
 categories: ['code review', 'team']

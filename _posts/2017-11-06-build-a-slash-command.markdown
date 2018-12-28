@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Build a Slash Command"
+redirect_to:
+  - https://www.tracylum.com/blog/2017-11-06-build-a-slash-command/
 date: 2017-11-06 11:16:08 -0500 
 comments: true
 categories: ["slack", "slash command"]

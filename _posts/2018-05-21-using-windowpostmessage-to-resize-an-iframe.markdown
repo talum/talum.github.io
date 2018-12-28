@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Using Window.postMessage to resize an iframe"
+redirect_to:
+  - https://www.tracylum.com/blog/2018-05-21-using-windowpostmessage-to-resize-an-iframe/
 date: 2018-05-21 23:03:38 -0400
 comments: true
 categories: ["javascript"]

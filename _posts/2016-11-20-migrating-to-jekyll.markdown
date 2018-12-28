@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Migrating from Octopress to Jekyll"
+redirect_to:
+  - https://www.tracylum.com/blog/2016-11-20-migrating-to-jekyll/
 date: 2016-11-20 09:58:14 -0400
 comments: true
 categories: 

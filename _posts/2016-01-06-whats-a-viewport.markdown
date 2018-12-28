@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "What's a Viewport? "
+redirect_to:
+  - https://www.tracylum.com/blog/2016-01-06-whats-a-viewport/
 date: 2016-01-06 12:50:09 -0500
 comments: true
 categories: "Flatiron&nbsp;School"

@@ -1,6 +1,8 @@
 ---
 layout: post
 title: All About Rack
+redirect_to:
+  - https://www.tracylum.com/blog/2016-12-28-all-about-rack/
 date: 2016-12-28 17:11:59 -0500 
 comments: true
 categories: 

@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Building an In-Browser IDE"
+redirect_to:
+  - https://www.tracylum.com/blog/2017-11-22-building-an-in-browser-ide/
 date: 2017-11-22 14:06:38 -0500 
 comments: true
 categories: ["React", "Elixir", "Redux"]

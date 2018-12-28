@@ -2,6 +2,8 @@
 layout: post
 title: "Building a Rails API for Use with Ember"
 date: 2016-01-26 15:12:05 -0500
+redirect_to:
+  - https://www.tracylum.com/blog/2016-01-26-5-things-i-learned-while-building-an-app-with-ember/
 comments: true
 categories: "Flatiron&nbsp;School"
 ---

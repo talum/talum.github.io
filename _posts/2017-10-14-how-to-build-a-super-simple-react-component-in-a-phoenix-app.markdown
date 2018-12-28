@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "How to Build a Super Simple React Component in a Phoenix App"
+redirect_to:
+  - https://www.tracylum.com/blog/2017-10-14-how-to-build-a-super-simple-react-component-in-a-phoenix-app/
 date: 2017-10-14 14:05:34 -0400 
 comments: true
 categories: ["react", "phoenix"]

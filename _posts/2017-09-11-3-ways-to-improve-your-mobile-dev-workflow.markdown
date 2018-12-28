@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "3 Ways to Improve Your Mobile Dev Workflow"
+redirect_to:
+  - https://www.tracylum.com/blog/2017-09-11-3-ways-to-improve-your-mobile-dev-workflow/
 date: 2017-09-11 22:49:18 -0400 
 comments: true
 categories: ["mobile"]

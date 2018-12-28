@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Using GitHub OmniAuth Login with Scopes to Access the GitHub API"
+redirect_to:
+  - https://www.tracylum.com/blog/2015-11-18-using-github-omniauth-login-with-scopes-to-access-the-github-api/
 date: 2015-11-18 20:53:55 -0500
 comments: true
 categories: "Flatiron&nbsp;School"

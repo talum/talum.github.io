@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Enums in ActiveRecord"
+redirect_to:
+  - https://www.tracylum.com/blog/2016-05-23-enums-in-activerecord/
 date: 2016-05-23 20:29:55 -0400
 comments: true
 categories: ["ActiveRecord", "Enum"]

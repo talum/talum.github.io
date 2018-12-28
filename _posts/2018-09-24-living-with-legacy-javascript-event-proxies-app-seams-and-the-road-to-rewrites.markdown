@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Living with Legacy JavaScript: Event Proxies, App Seams, and the Road to Rewrites"
+redirect_to:
+  - https://www.tracylum.com/blog/2018-09-24-living-with-legacy-javascript-event-proxies-app-seams-and-the-road-to-rewrites/
 date: 2018-09-24 20:33:12 -0400
 comments: true
 categories: ['javascript']

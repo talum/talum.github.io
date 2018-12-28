@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "How to Write a Rake Task"
+redirect_to:
+  - https://www.tracylum.com/blog/2016-12-27-how-to-write-a-rake-task/
 date: 2016-12-27 16:43:51 -0500 
 comments: true
 categories: 

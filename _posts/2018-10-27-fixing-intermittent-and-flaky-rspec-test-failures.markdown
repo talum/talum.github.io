@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Fixing Random, Intermittent, and Flaky RSpec Test Failures"
+redirect_to:
+  - https://www.tracylum.com/blog/2018-10-27-fixing-intermittent-and-flaky-rspec-test-failures/
 date: 2018-10-27 11:54:04 -0400
 comments: true
 categories: ['ruby', 'rspec', 'testing']

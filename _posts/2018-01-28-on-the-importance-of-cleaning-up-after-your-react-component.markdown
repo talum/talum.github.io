@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "On the Importance of Cleaning Up After Your React Component"
+redirect_to:
+  - https://www.tracylum.com/blog/2018-01-28-on-the-importance-of-cleaning-up-after-your-react-component/
 date: 2018-01-28 11:40:41 -0500 
 comments: true
 categories: ["react"]

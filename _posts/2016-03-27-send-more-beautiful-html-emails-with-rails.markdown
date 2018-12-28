@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Send More Beautiful HTML Emails with Rails"
+redirect_to:
+  - https://www.tracylum.com/blog/2016-03-27-send-more-beautiful-html-emails-with-rails/
 date: 2016-03-27 09:04:20 -0400
 comments: true
 categories: ["Flatiron&nbsp;School", "ActionMailer", "Rails", "Email"] 

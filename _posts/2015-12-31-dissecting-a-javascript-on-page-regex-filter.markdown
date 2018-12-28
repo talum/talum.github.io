@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Dissecting a JavaScript On-Page RegEx Filter"
+redirect_to:
+  - https://www.tracylum.com/blog/2015-12-31-dissecting-a-javascript-on-page-regex-filter/
 date: 2015-12-31 09:49:18 -0500
 comments: true
 categories: "Flatiron&nbsp;School"

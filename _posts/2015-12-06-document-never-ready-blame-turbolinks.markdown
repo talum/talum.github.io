@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Document Never Ready? Blame Turbolinks"
+redirect_to:
+  - https://www.tracylum.com/blog/2015-12-06-document-never-ready-blame-turbolinks/
 date: 2015-12-06 22:31:34 -0500
 comments: true
 categories: "Flatiron&nbsp;School"

@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Aw, CRUD. I Need Some REST."
+redirect_to:
+  - https://www.tracylum.com/blog/2016-05-17-aw-crud/
 date: 2016-05-17 22:55:01 -0400
 comments: true
 categories: ["CRUD", "REST"]

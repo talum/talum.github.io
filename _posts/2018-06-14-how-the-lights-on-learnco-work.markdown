@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "How the Lights on Learn.co Work"
+redirect_to:
+  - https://www.tracylum.com/blog/2018-06-14-how-the-lights-on-learnco-work/
 date: 2018-06-14 21:18:17 -0400 
 comments: true
 categories: 

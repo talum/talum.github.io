@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Tips for Upgrading to React 16 and React Router 4"
+redirect_to:
+  - https://www.tracylum.com/blog/2017-12-02-tips-for-upgrading-to-react-16-and-react-router-4/
 date: 2017-12-02 14:09:58 -0500 
 comments: true
 categories: ["react", "react router"]

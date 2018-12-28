@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Turn a Simple React App Into a Chrome Extension"
+redirect_to:
+  - https://www.tracylum.com/blog/2017-11-05-turn-a-simple-react-app-into-a-chrome-extension/
 date: 2017-11-05 09:32:09 -0500 
 comments: true
 categories: ["React", "Chrome"]

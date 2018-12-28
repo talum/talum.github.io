@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "How and When to Start Using tmux"
+redirect_to:
+  - https://www.tracylum.com/blog/2018-03-03-how-and-when-to-start-using-tmux/
 date: 2018-03-03 22:22:10 -0500
 comments: true
 categories: ["tmux"]

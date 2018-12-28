@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Important Things I Learned from Reading Practical Vim"
+redirect_to:
+  - https://www.tracylum.com/blog/2017-12-27-important-things-i-learned-from-reading-practical-vim/
 date: 2017-12-27 14:42:12 -0500 
 comments: true
 categories: ["vim"]

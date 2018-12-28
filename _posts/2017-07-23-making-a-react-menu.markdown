@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Making a React Menu"
+redirect_to:
+  - https://www.tracylum.com/blog/2017-07-23-making-a-react-menu/
 date: 2017-07-23 10:58:40 -0400 
 comments: true
 categories: ["react", "javascript", "ES6"] 

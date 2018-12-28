@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "An Idiot's Guide to Leveling Up with Ember"
+redirect_to:
+  - https://www.tracylum.com/blog/2016-01-28-an-idiots-guide-to-leveling-up-with-ember/
 date: 2016-01-28 08:43:15 -0500
 comments: true
 categories: ["Flatiron&nbsp;School", "Ember"] 

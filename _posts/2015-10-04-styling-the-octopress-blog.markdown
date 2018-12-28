@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Styling the Octopress Blog"
+redirect_to:
+  - https://www.tracylum.com/blog/2015-10-04-styling-the-octopress-blog/
 date: 2015-10-04 14:57:25 -0400
 comments: true
 categories: "Flatiron&nbsp;School"

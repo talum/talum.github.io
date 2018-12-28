@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Writing Straight Up SQL"
+redirect_to:
+  - https://www.tracylum.com/blog/2016-10-29-writing-straight-up-sql/
 date: 2016-10-29 09:58:14 -0400
 comments: true
 categories: 

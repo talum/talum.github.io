@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Autocomplete an Address with a React Form"
+redirect_to:
+  - https://www.tracylum.com/blog/2017-05-20-autocomplete-an-address-with-a-react-form/
 date: 2017-05-20 13:38:14 -0400 
 comments: true
 categories: ['react', 'google maps']

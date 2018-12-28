@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Using ActiveRecord Transactions to Make Actions Atomic"
+redirect_to:
+  - https://www.tracylum.com/blog/2016-05-23-enums-in-activerecord/
 date: 2016-05-26 21:53:58 -0400
 comments: true
 categories: ["Active&nbsp;Record", "atomic operations"]

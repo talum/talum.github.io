@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Removing Single Table Inheritance from Rails"
+redirect_to:
+  - https://www.tracylum.com/blog/2018-12-08-removing-single-table-inheritance-from-rails/
 date: 2018-12-08 19:26:16 -0500
 comments: true
 categories: ["rails"]

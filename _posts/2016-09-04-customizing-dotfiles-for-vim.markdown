@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Customizing Dotfiles for Vim"
+redirect_to:
+  - https://www.tracylum.com/blog/2016-09-04-customizing-dotfiles-for-vim/
 date: 2016-09-04 12:53:32 -0400
 comments: true
 categories: ["vim", "dotfiles"]

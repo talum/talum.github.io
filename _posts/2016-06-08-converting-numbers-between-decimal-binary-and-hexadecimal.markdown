@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Converting Numbers Between Decimal, Binary, and Hexadecimal"
+redirect_to:
+  - https://www.tracylum.com/blog/2016-06-08-converting-numbers-between-decimal-binary-and-hexadecimal/
 date: 2016-06-08 20:05:06 -0400
 comments: true
 categories: ["binary", "decimal", "hexadecimal"]

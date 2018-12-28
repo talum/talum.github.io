@@ -1,12 +1,14 @@
 ---
 layout: post
 title: "React Basics: A Simple Fitting Room Component"
-date: 2017-07-04 17:47:24 -0400 
+redirect_to:
+  - https://www.tracylum.com/blog/2017-07-04-react-basics-a-simple-fitting-room-component/
+date: 2017-07-04 17:47:24 -0400
 comments: true
 categories: ["react", "javascript"]
 ---
 ![FittingRooms](https://s3-us-west-2.amazonaws.com/talum.github.io/fittingrooms.gif)
-# React and Everything Amazing About It 
+# React and Everything Amazing About It
 
 I've been writing apps in React for a little over eight months now, and I love
 it. Although it may be difficult at first to dive into the React ecosystem

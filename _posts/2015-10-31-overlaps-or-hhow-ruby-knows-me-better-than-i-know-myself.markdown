@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Overlaps with Ranges and How Ruby Just Gets Me"
+redirect_to:
+  - https://www.tracylum.com/blog/2015-10-31-overlaps-or-hhow-ruby-knows-me-better-than-i-know-myself/
 date: 2015-10-31 18:55:00 -0400
 comments: true
 categories: "Flatiron&nbsp;School"

@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Learning Vim"
+redirect_to:
+  - https://www.tracylum.com/blog/2016-08-24-learning-vim/
 date: 2016-08-24 22:31:38 -0400
 comments: true
 categories: ["vim"]

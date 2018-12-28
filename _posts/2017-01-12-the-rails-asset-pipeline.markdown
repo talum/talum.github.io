@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "The Rails Asset Pipeline"
+redirect_to:
+  - https://www.tracylum.com/blog/2017-01-12-the-rails-asset-pipeline/
 date: 2017-01-12 16:06:15 -0500 
 comments: true
 categories: 

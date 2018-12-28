@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Flatiron Follower, a Twitter CLI"
+redirect_to:
+  - https://www.tracylum.com/blog/2015-10-20-flatiron-follow-a-twitter-cli/
 date: 2015-10-20 14:10:07 -0400
 comments: true
 categories: "Flatiron&nbsp;School"

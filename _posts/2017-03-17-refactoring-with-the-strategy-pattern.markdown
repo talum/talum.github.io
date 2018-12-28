@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Refactoring with the Strategy Pattern"
+redirect_to:
+  - https://www.tracylum.com/blog/2017-03-17-refactoring-with-the-strategy-pattern/
 date: 2017-03-17 08:53:39 -0400 
 comments: true
 categories: ["refactoring", "strategy pattern"]

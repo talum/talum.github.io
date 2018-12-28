@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Advanced SQL, the Sequel: Multiple Joins in Active Record Queries"
+redirect_to:
+  - https://www.tracylum.com/blog/2015-10-31-sql-the-sequel/
 date: 2015-10-31 21:48:06 -0400
 comments: true
 categories: "Flatiron&nbsp;School"

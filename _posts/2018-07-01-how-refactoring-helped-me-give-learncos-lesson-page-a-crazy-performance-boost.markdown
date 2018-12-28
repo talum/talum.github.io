@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "How Refactoring Helped Me Give Learn.co's Lesson Page a Crazy Performance Boost"
+redirect_to:
+  - https://www.tracylum.com/blog/2018-07-01-how-refactoring-helped-me-give-learncos-lesson-page-a-crazy-performance-boost/
 date: 2018-07-01 14:07:10 -0400
 comments: true
 categories: ["performance", "sql"]

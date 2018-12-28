@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "How to Add Some Sass to Your Blog"
+redirect_to:
+  - https://www.tracylum.com/blog/2015-10-10-how-to-add-some-sass-to-your-blog/
 date: 2015-10-10 20:08:29 -0400
 comments: true
 categories: "Flatiron&nbsp;School"

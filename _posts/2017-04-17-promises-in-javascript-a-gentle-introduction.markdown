@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Promises in JavaScript: A Gentle Introduction"
+redirect_to:
+  - https://www.tracylum.com/blog/2017-04-17-promises-in-javascript-a-gentle-introduction/
 date: 2017-04-17 20:21:52 -0400 
 comments: true
 categories: ["JavaScript", "promises"]

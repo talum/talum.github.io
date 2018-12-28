@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Keyboard Shortcuts"
+redirect_to:
+  - https://www.tracylum.com/blog/2016-05-01-keyboard-shortcuts/
 date: 2016-05-01 18:27:35 -0400
 comments: true
 categories: ["Flatiron&nbsp;School", "keyboard shortcuts"]

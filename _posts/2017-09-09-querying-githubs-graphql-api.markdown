@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Querying GitHub's GraphQL API"
+redirect_to:
+  - https://www.tracylum.com/blog/2017-09-09-querying-githubs-graphql-api/
 date: 2017-09-09 21:38:53 -0400 
 comments: true
 categories: ["graphql", "elixir", "phoenix"]

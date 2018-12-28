@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "An Intro to Object-Oriented CSS"
+redirect_to:
+  - https://www.tracylum.com/blog/2016-12-26-an-intro-to-object-oriented-css/
 date: 2016-12-26 13:58:14 -0400
 comments: true
 categories: 

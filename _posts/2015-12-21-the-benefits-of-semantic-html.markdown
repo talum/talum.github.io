@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "The Benefits of Semantic HTML"
+redirect_to:
+  - https://www.tracylum.com/blog/2015-12-21-the-benefits-of-semantic-html/
 date: 2015-12-21 17:55:09 -0500
 comments: true
 categories: "Flatiron&nbsp;School"

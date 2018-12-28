@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Building Assignments on Learn.co"
+redirect_to:
+  - https://www.tracylum.com/blog/2018-03-02-building-assignments-on-learnco/
 date: 2018-03-02 20:38:22 -0500 
 comments: true
 categories: ["react", "redux"]
