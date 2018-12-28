@@ -30,6 +30,7 @@ highlighter: rouge
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-redirect-from
 exclude:
   - Gemfile
   - Gemfile.lock
